@@ -1,0 +1,19 @@
+---
+title: "HDT2"
+author: "Elean Rivas, Javier Alvarez"
+date: "2023-02-16"
+output: pdf_document
+---
+
+###Universidad del Valle de Guatemala
+###Mineria de datos
+###Elean Rivas - 19062
+###Javier Alarez - 18051
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+peliculas <- read.csv("C:\\Users\\javie\\Desktop\\U\\2023f\\mineria\\movies.csv")
+```
