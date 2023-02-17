@@ -17,3 +17,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 peliculas <- read.csv("C:\\Users\\javie\\Desktop\\U\\2023f\\mineria\\movies.csv")
 ```
+##1. Haga el preprocesamiento del dataset, explique qué variables no aportan información a la generación de grupos y por qué. Describa con qué variables calculará los grupos. 
+```{r}
+variables <- c("original_title", "originalLanguage", "homePage", "video", "actorsCharacter")
+DF.variable <- data.frame(variables)
+print(DF.variable)
+
+```
+Estas variables son (en nuestra opinion) variables que no ayudan con la generacion de los grupos ya que tienen caracteristicas propias que no se relacionan con las demas y/o contienen informacion no usable.
