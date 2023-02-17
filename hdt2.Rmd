@@ -17,7 +17,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 peliculas <- read.csv("C:\\Users\\javie\\Desktop\\U\\2023f\\mineria\\movies.csv")
 ```
-##1. Haga el preprocesamiento del dataset, explique qué variables no aportan información a la generación de grupos y por qué. Describa con qué variables calculará los grupos. 
+##1. Haga el preprocesamiento del dataset, explique qué variables no aportan información a la generación de grupos y por qué. 
+    Describa con qué variables calculará los grupos. 
 ```{r}
 variables <- c("original_title", "originalLanguage", "homePage", "video", "actorsCharacter")
 DF.variable <- data.frame(variables)
@@ -56,7 +57,7 @@ Podemos observar que el valor que retorna la funcion de hopkins esta bastante al
 
 
 ##3. Determine cuál es el número de grupos a formar más adecuado para los datos que está trabajando. 
-  Haga una gráfica de codo y explique la razón de la elección de la cantidad de clústeres con la que trabajará. 
+    Haga una gráfica de codo y explique la razón de la elección de la cantidad de clústeres con la que trabajará. 
   
 ```{r}
 wss = 0
