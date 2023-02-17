@@ -25,3 +25,21 @@ print(DF.variable)
 
 ```
 Estas variables son (en nuestra opinion) variables que no ayudan con la generacion de los grupos ya que tienen caracteristicas propias que no se relacionan con las demas y/o contienen informacion no usable.
+
+##2. Analice la tendencia al agrupamiento usando el estadístico de Hopkings y la VAT (Visual Assessment of cluster Tendency). Discuta sus resultados e impresiones. 
+
+```{r}
+library(hopkins)
+peliculas <- peliculas[complete.cases(peliculas),]
+popularity <- peliculas[, 'popularity']
+budget <- peliculas[, 'budget']
+revenue <- peliculas[,'revenue']
+runtime <- peliculas[,'runtime']
+voteCount <- peliculas[,'voteCount']
+normd <- data.frame(popularity,budget,revenue,runtime, voteCount )
+clustering <- scale(normd)
+
+hopkins(clustering)
+
+dataDist <- dist(clustering)
+```
